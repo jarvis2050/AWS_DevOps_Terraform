@@ -37,6 +37,7 @@ resource "aws_internet_gateway" "qyt_internet_gw" {
   }
 }
 
+
 resource "aws_route_table" "qyt_aws_route_table" {
   vpc_id = aws_vpc.qyt_aws_vpc.id
 
