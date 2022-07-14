@@ -31,3 +31,13 @@ resource "aws_subnet" "test_aws_subnet" {
     Name = "test_aws_subnet"
   }
 }
+
+resource "aws_subnet" "test_aws_subnet_2" {
+  vpc_id     = aws_vpc.test_aws_vpc.id
+  cidr_block = "10.0.2.0/24"
+#  map_public_ip_on_launch = true
+  availability_zone = "us-east-1a"
+  tags = {
+    Name = "test_aws_subnet_2"
+  }
+}
